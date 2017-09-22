@@ -8,13 +8,13 @@
     <h1>Instalación contactos</h1>
     <?php
         require_once "../config.php";
-        $pdo = new pdo("mysql:host={$host};port={$port}", $user, $pass);
+        $pdo = new PDO("pgsql:host={$host};port={$port};dbname={$dbname}", $user, $pass);
 
-        $sql = "create database $dbname; use $dbname;";
-        $pdo->exec($sql);
+        //$sql = "create database $dbname; use $dbname;";
+        //$pdo->exec($sql);
 
         $sql = "create table contacto(
-            id integer auto_increment primary key,
+            id serial primary key,
             nombre varchar(20),
             mail varchar(60)
             )";

@@ -9,7 +9,7 @@
     <table>
         <?php
         REQUIRE_ONCE "../config.php";
-        $pdo = new PDO("mysql:host={$host};port={$port};dbname={$dbname}", $user, $pass);
+        $pdo = new PDO("pgsql:host={$host};port={$port};dbname={$dbname}", $user, $pass);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
         $sql = "SELECT * FROM contacto;";
