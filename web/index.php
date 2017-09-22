@@ -2,25 +2,25 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Ccontactos</title>
+<title>Contactos</title>
 </head>
 <body>
-    <h1>Contatctos</h1>
+    <h1>Contactos</h1>
     <table>
-   <?php
-   REQUIRE_ONCE "../CONFIG.PHP";
-   $pdo = new PDO("mysql:host={$host);port={$port};DBNAME={$DBNAME}", $user, $pass);
+        <?php
+        REQUIRE_ONCE "../config.php";
+        $pdo = new PDO("mysql:host={$host};port={$port};dbname={$dbname}", $user, $pass);
 
-   $SQL = "SELECT * FROM CONTATCTO;";
-   $RES = $PDO->QUERY($SQL);
-   foreach ($FILE as $value) {
-        echo "<tr>"   
-        foreach ($fila as $value){
-            echo "<td>$VALUE</td>";
+        $sql = "SELECT * FROM contacto;";
+        $res = $pdo->query($sql);
+        foreach ($res as $fila) {
+                echo "<tr>";  
+                foreach ($fila as $value){
+                    echo "<td>$value</td>";
+                }
+                echo "</tr>";
         }
-        echo "</tr>";
-   }
-   ?>
+        ?>
 
    </table>
 </body>
