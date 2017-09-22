@@ -1,0 +1,8 @@
+[user]
+	name = Toyouthat
+	email = ignaciochicharro@gmail.com
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
